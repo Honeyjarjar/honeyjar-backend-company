@@ -19,5 +19,22 @@ module.exports = {
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist')
-	}
+	},
+	jest: {
+		"transform": {
+			"^.+\\.ts$": "ts-jest"
+		},
+		"testRegex": "\\.test\\.ts$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"json"
+		],
+		"globals": {
+			"ts-jest": {
+				"diagnostics": true
+			}
+		}
+	},
 };

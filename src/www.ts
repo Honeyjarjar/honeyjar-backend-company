@@ -1,4 +1,4 @@
-import app from "../app";
+import app from "./app";
 import * as path from "path";
 import dotenv from "dotenv";
 
