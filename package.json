@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npx prisma introspect && npx prisma generate",
     "start": "nodemon --exec ts-node src/www.ts",
     "test": "jest --detectOpenHandles --forceExit"
   },
