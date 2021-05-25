@@ -1,0 +1,10 @@
+{
+	"apps" : [
+		{
+			"name" : "honeyjar-backend-company-server",
+			"script" : "npm",
+			"args" : "start",
+			"watch": true
+		}
+	]
+}
