@@ -25,11 +25,13 @@ model Profile {
 }
 
 model User {
-  id       Int      @id @default(autoincrement())
-  name     String?  @db.VarChar(255)
-  email    String   @unique @db.VarChar(255)
-  uuid     String   @unique @default(uuid()) @db.Uuid
-  password String   @db.VarChar(255)
-  Post     Post[]
-  Profile  Profile?
+  id        Int      @id @default(autoincrement())
+  name      String?  @db.VarChar(255)
+  email     String   @unique @db.VarChar(255)
+  uuid      String   @unique @default(uuid()) @db.Uuid
+  password  String   @db.VarChar(512)
+  createdAt DateTime @default(now()) @db.Timestamp(6)
+  updatedAt DateTime @default(now()) @db.Timestamp(6)
+  Post      Post[]
+  Profile   Profile?
 }
